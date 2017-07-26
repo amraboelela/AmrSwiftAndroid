@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+mkdir armeabi-v7a
+scp amr@ubuntu16.local:android/SwiftAndroid/AddSwiftLib/output/armeabi-v7a/libAddSwift.so armeabi-v7a

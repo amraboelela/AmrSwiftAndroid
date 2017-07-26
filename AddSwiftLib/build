@@ -9,3 +9,6 @@ swiftc \
     -emit-library -o libAddSwift.so \
     Add.swift
 
+mkdir -p output/armeabi-v7a
+cp -r libAddSwift.so output/armeabi-v7a
+rm libAddSwift.so
