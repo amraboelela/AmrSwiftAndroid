@@ -19,7 +19,7 @@ cmake_minimum_required(VERSION 3.4.1)
 
 # configure import libs
 set(distribution_DIR ${CMAKE_SOURCE_DIR}/../../../../distribution)
-set(SwiftAndroidDIR ${CMAKE_SOURCE_DIR}/../../../../..)
+#set(AddSwiftDIR ${CMAKE_SOURCE_DIR}/../../../../../AddSwift)
 
 add_library(lib_gmath STATIC IMPORTED)
 set_target_properties(lib_gmath PROPERTIES IMPORTED_LOCATION
@@ -35,7 +35,7 @@ set_target_properties(lib_gperf PROPERTIES IMPORTED_LOCATION
 
 add_library(AddSwift SHARED IMPORTED)
 set_target_properties(AddSwift PROPERTIES IMPORTED_LOCATION
-    ${SwiftAndroidDIR}/AddSwift/lib/${ANDROID_ABI}/libAddSwift.so)
+    ${distribution_DIR}/gaddswift/lib/${ANDROID_ABI}/libgaddswift.so)
 
 # build application's shared lib
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
@@ -51,4 +51,5 @@ target_link_libraries(add-swift
                       android
                       lib_gmath
                       lib_gperf
-                      log)
+                      log
+                      AddSwift)
