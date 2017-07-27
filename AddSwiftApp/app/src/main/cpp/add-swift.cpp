@@ -32,7 +32,7 @@
  *   app/src/main/java/com/example/hellolibs/MainActivity.java
  */
 extern "C" JNIEXPORT jstring JNICALL
-Java_com_example_hellolibs_MainActivity_stringFromJNI(JNIEnv *env, jobject thiz) {
+Java_com_example_addswift_MainActivity_stringFromJNI(JNIEnv *env, jobject thiz) {
     // Just for simplicity, we do this right away; correct way would do it in
     // another thread...
     auto ticks = GetTicks();
@@ -45,5 +45,5 @@ Java_com_example_hellolibs_MainActivity_stringFromJNI(JNIEnv *env, jobject thiz)
 
     LOGI("calculation time: %" PRIu64, ticks);
 
-    return env->NewStringUTF("Hello from JNI LIBS!");
+    return env->NewStringUTF("AddSwift from JNI LIBS!");
 }
