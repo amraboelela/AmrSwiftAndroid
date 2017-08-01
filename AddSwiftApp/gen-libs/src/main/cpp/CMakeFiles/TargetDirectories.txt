@@ -1,0 +1,8 @@
+/Users/aaboelela/android/AmrSwiftAndroid/AddSwiftApp/gen-libs/src/main/cpp/CMakeFiles/rebuild_cache.dir
+/Users/aaboelela/android/AmrSwiftAndroid/AddSwiftApp/gen-libs/src/main/cpp/CMakeFiles/edit_cache.dir
+/Users/aaboelela/tmp/gmath/CMakeFiles/rebuild_cache.dir
+/Users/aaboelela/tmp/gmath/CMakeFiles/edit_cache.dir
+/Users/aaboelela/tmp/gmath/CMakeFiles/gmath.dir
+/Users/aaboelela/tmp/gperf/CMakeFiles/rebuild_cache.dir
+/Users/aaboelela/tmp/gperf/CMakeFiles/edit_cache.dir
+/Users/aaboelela/tmp/gperf/CMakeFiles/gperf.dir
