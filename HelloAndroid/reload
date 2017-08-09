@@ -1,0 +1,2 @@
+scp amr@ubuntu16.local:android/AmrSwiftAndroid/HelloAndroid/hello .
+adb push hello /data/local/tmp

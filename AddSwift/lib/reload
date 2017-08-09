@@ -6,4 +6,4 @@ set -e
 : ${SWIFT_MACHINE_USERNAME?}
 
 mkdir -p armeabi-v7a
-scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:android/SwiftAndroid/AddSwift/lib/armeabi-v7a/libAddSwift.so armeabi-v7a
+scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:android/AmrSwiftAndroid/AddSwift/lib/armeabi-v7a/libAddSwift.so armeabi-v7a

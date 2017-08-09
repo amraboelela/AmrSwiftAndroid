@@ -1,0 +1,1 @@
+scp amr@ubuntu16.local:android/HelloSwift/libs/armeabi-v7a/libhello-swift.so lib/armeabi-v7a/libgaddswift.so
