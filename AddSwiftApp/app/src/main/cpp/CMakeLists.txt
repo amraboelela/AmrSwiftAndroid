@@ -35,7 +35,7 @@ set_target_properties(lib_gperf PROPERTIES IMPORTED_LOCATION
 
 add_library(AddSwift SHARED IMPORTED)
 set_target_properties(AddSwift PROPERTIES IMPORTED_LOCATION
-    ${distribution_DIR}/gaddswift/lib/${ANDROID_ABI}/libgaddswift.so)
+    ${distribution_DIR}/AddSwift/lib/${ANDROID_ABI}/libAddSwift.so)
 
 # build application's shared lib
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
