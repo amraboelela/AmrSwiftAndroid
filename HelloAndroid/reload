@@ -3,5 +3,5 @@ SRC_DIR=$PWD
 ~/swift/swift/utils/android/reload-toolchain
 
 cd ${SRC_DIR}
-scp amr@ubuntu16.local:android/AmrSwiftAndroid/HelloAndroid/hello .
+scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:android/AmrSwiftAndroid/HelloAndroid/hello .
 adb push hello /data/local/tmp
