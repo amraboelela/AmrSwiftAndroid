@@ -6,9 +6,10 @@ swiftc \
     -sdk ${ANDROID_NDK_DIR}/platforms/android-21/arch-arm \
     -L ${ANDROID_NDK_DIR}/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a \
     -L ${ANDROID_NDK_DIR}/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x \
-    -lc \
     -emit-library -o libAddSwift.so \
     Add.swift
+
+#    -lc \
 
 mkdir -p lib/armeabi-v7a
 cp -r libAddSwift.so lib/armeabi-v7a
