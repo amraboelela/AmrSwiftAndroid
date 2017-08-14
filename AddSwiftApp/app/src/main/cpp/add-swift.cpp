@@ -45,5 +45,5 @@ Java_com_example_addswift_MainActivity_stringFromJNI(JNIEnv *env, jobject thiz) 
 
     LOGI("calculation time: %" PRIu64, ticks);
 
-    return env->NewStringUTF("AddSwift from JNI LIBS!");
+    return env->NewStringUTF("add-swift from JNI LIBS!");
 }
