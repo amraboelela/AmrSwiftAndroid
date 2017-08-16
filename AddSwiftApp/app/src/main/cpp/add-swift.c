@@ -9,7 +9,7 @@
 
 uint8_t SWIFT_ADD(uint8_t, uint8_t);
 
-jstring Java_com_example_helloswift_HelloSwift_stringFromJNI(JNIEnv * env, jobject thiz ) {
+jstring Java_com_example_addswift_MainActivity_stringFromJNI(JNIEnv * env, jobject thiz ) {
     
     uint8_t a = 123;
     uint8_t b = 45;
