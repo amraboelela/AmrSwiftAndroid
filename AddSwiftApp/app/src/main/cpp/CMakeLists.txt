@@ -37,16 +37,16 @@ set(SwiftAndroidDir /Users/aaboelela/android/AmrSwiftAndroid)
 
 #    ${distribution_DIR}/gperf/lib/${ANDROID_ABI}/libgperf.so)
 
-add_library(AddSwift SHARED IMPORTED)
-set_target_properties(AddSwift PROPERTIES IMPORTED_LOCATION
-    ${SwiftAndroidDir}/lib/${ANDROID_ABI}/libAddSwift.so)
+#add_library(AddSwift SHARED IMPORTED)
+#set_target_properties(AddSwift PROPERTIES IMPORTED_LOCATION
+#    ${SwiftAndroidDir}/lib/${ANDROID_ABI}/libAddSwift.so)
 
 #add_library(gaddswift SHARED IMPORTED)
 #set_target_properties(gaddswift PROPERTIES IMPORTED_LOCATION
 #    /Users/aaboelela/android/libs/${ANDROID_ABI}/libgaddswift.so)
 
 # build application's shared lib
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
 
 add_library(add-swift SHARED
             add-swift.c)
@@ -56,7 +56,6 @@ add_library(add-swift SHARED
 
 target_link_libraries(
                       add-swift
-                      AddSwift
                       android
                       log
                       )

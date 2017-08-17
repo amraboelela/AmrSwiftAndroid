@@ -1,0 +1,10 @@
+SRC_DIR=$PWD
+
+echo Copying swift core libs:
+scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:swift/build/Ninja-ReleaseAssert/swift-linux-x86_64/lib/swift/android/armv7/{libswiftCore.so,libswiftSwiftOnoneSupport.so} ${SRC_DIR}/armeabi-v7a
+
+echo Copying icu libs:
+scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:swift/libiconv-libicu-android/armeabi-v7a/{libicudataswift.so,libicui18nswift.so,libicuucswift.so} ${SRC_DIR}/armeabi-v7a
+
+cp ${ANDROID_NDK_DIR}/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a/libc++_shared.so ${SRC_DIR}/armeabi-v7a
+
