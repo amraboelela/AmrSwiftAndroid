@@ -33,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public native String  stringFromJNI();
     static {
-        //System.loadLibrary("c++_shared");
-        //System.loadLibrary("icudataswift");
-        //System.loadLibrary("icuucswift");
-        //System.loadLibrary("icui18nswift");
-        //System.loadLibrary("swiftSwiftOnoneSupport"); // used by swiftCore
-        //System.loadLibrary("swiftCore");
+        System.loadLibrary("c++_shared");
+        System.loadLibrary("icudataswift");
+        System.loadLibrary("icuucswift");
+        System.loadLibrary("icui18nswift");
+        System.loadLibrary("swiftSwiftOnoneSupport"); // used by swiftCore
+        System.loadLibrary("swiftCore");
         System.loadLibrary("AddSwift");
         System.loadLibrary("add-swift");
     }
