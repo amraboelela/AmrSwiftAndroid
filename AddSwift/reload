@@ -1,8 +1,0 @@
-#!/bin/bash
-
-set -e
-
-: ${SWIFT_MACHINE_USERNAME?}
-: ${SWIFT_MACHINE_ADDRESS?}
-
-scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:android/AmrSwiftAndroid/lib/armeabi-v7a/libAddSwift.so ~/android/AmrSwiftAndroid/lib/armeabi-v7a
