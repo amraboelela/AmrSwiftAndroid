@@ -1,10 +1,12 @@
-SRC_DIR=$PWD
+#!/usr/bin/env bash
 
-echo Copying swift core libs:
-scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:swift/build/Ninja-ReleaseAssert/swift-linux-x86_64/lib/swift/android/armv7/{libswiftCore.so,libswiftSwiftOnoneSupport.so} ${SRC_DIR}/armeabi-v7a
+SWIFT_MACHINE_USERNAME="${SWIFT_MACHINE_USERNAME:?Please set the username for the machine which has the needed libraries in the SWIFT_MACHINE_USERNAME environment variable}"
+SWIFT_MACHINE_ADDRESS="${SWIFT_MACHINE_ADDRESS:?Please set the machine address of the machine which has the needed libraries in the SWIFT_MACHINE_ADDRESS environment variable}"
 
-echo Copying icu libs:
-scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:swift/libiconv-libicu-android/armeabi-v7a/{libicudataswift.so,libicui18nswift.so,libicuucswift.so} ${SRC_DIR}/armeabi-v7a
+scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:swift/build/Ninja-ReleaseAssert/swift-linux-x86_64/lib/swift/android/armv7/{libswiftCore.so,libswiftSwiftOnoneSupport.so} armeabi-v7a
 
-cp ${ANDROID_NDK_DIR}/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a/libc++_shared.so ${SRC_DIR}/armeabi-v7a
+scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:swift/libiconv-libicu-android/armeabi-v7a/{libicudataswift.so,libicui18nswift.so,libicuucswift.so} armeabi-v7a
 
+cp ${ANDROID_NDK_DIR}/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a/libc++_shared.so armeabi-v7a
+
+scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:android/AmrSwiftAndroid/AddSwift/lib/armeabi-v7a/libAddSwift.so armeabi-v7a
