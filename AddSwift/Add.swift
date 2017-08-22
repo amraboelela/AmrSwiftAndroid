@@ -7,8 +7,7 @@ public func swiftAdd()
 
     let four = 2 + 2
     // TODO/FIXME: print goes to /dev/null on Android
-    //print("2 + 2 = \(four)”)
-
+    print("2 + 2 = \(four)")
 
     // Remember to not block the event loop
 }
