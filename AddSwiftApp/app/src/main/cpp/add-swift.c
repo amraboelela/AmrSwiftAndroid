@@ -17,8 +17,8 @@ extern void myMain(void);
 JNIEXPORT jstring JNICALL
 Java_com_example_addswift_MainActivity_stringFromJNI(JNIEnv * env, jobject thiz ) {
     
-    uint8_t a = 231;
-    uint8_t b = 137;
+    uint8_t a = 111;
+    uint8_t b = 77;
     myMain();
     uint8_t c = addTwoNumbers(a, b); //SWIFT_ADD(a,b); a+b;  //
     //GetTicks();
