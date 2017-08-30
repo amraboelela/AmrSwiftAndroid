@@ -5,3 +5,9 @@
 ```
 libs$ ./reload 
 ```
+
+- For building:
+
+```
+app$ ./build.sh 
+```
