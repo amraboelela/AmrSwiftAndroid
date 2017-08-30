@@ -1,5 +1,5 @@
-@_cdecl("swiftAdd")
-public func swiftAdd()
+@_cdecl("myMain")
+public func myMain()
 {
 
     // Now the fun can begin!
@@ -12,7 +12,7 @@ public func swiftAdd()
     // Remember to not block the event loop
 }
 
-/*
-func addTwoNumbers(first: UInt8, second: UInt8) -> UInt8 {
+@_cdecl("addTwoNumbers")
+public func addTwoNumbers(first: UInt8, second: UInt8) -> UInt8 {
     return first + second
-} */
+}
