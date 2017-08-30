@@ -18,28 +18,26 @@
 cmake_minimum_required(VERSION 3.4.1)
 
 # configure import libs
-#set(distribution_DIR ${CMAKE_SOURCE_DIR}/../../../../distribution)
+set(distribution_DIR ${CMAKE_SOURCE_DIR}/../../../../distribution)
 #set(AddSwiftDIR ${CMAKE_SOURCE_DIR}/../../../../../AddSwift)
-set(SwiftAndroidDir /Users/aaboelela/android/AmrSwiftAndroid)
+set(AndroidAppDir /Users/aaboelela/android/AmrSwiftAndroid/AddSwiftApp)
 #${CMAKE_SOURCE_DIR}/../../../../..)
 
 #add_library(lib_gmath STATIC IMPORTED)
 #set_target_properties(lib_gmath PROPERTIES IMPORTED_LOCATION
-#    ${SwiftAndroidDir}/lib/${ANDROID_ABI}/libgmath.a)
+#    ${AndroidAppDir}/libs/${ANDROID_ABI}/libgmath.a)
 
 # shared lib will also be tucked into APK and sent to target
 # refer to app/build.gradle, jniLibs section for that purpose.
 # ${ANDROID_ABI} is handy for our purpose here. Probably this ${ANDROID_ABI} is
 # the most valuable thing of this sample, the rest are pretty much normal cmake
-#add_library(lib_gperf SHARED IMPORTED)
-#set_target_properties(lib_gperf PROPERTIES IMPORTED_LOCATION
-#    ${SwiftAndroidDir}/lib/${ANDROID_ABI}/libgperf.so)
+add_library(lib_gperf SHARED IMPORTED)
+set_target_properties(lib_gperf PROPERTIES IMPORTED_LOCATION
+    ${distribution_DIR}/gperf/lib/${ANDROID_ABI}/libgperf.so)
 
-#    ${distribution_DIR}/gperf/lib/${ANDROID_ABI}/libgperf.so)
-
-#add_library(AddSwift SHARED IMPORTED)
-#set_target_properties(AddSwift PROPERTIES IMPORTED_LOCATION
-#    ${SwiftAndroidDir}/lib/${ANDROID_ABI}/libAddSwift.so)
+add_library(AddSwift SHARED IMPORTED)
+set_target_properties(AddSwift PROPERTIES IMPORTED_LOCATION
+${AndroidAppDir}/libs/${ANDROID_ABI}/libAddSwift.so)
 
 #add_library(gaddswift SHARED IMPORTED)
 #set_target_properties(gaddswift PROPERTIES IMPORTED_LOCATION
@@ -52,10 +50,11 @@ add_library(add-swift SHARED
             add-swift.c)
 
 #target_include_directories(add-swift PRIVATE
-#                           ${SwiftAndroidDir}/include)
+#                           ${distribution_DIR}/gperf/include)
 
 target_link_libraries(
                       add-swift
                       android
                       log
+                      AddSwift
                       )
