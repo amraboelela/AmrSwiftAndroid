@@ -12,7 +12,7 @@ scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:swift/swift-android-toolc
 
 
 #cd ~/swift
-adb push libs/armeabi-v7a/{libswiftCore.so,libswiftSwiftOnoneSupport.so,libc++_shared.so,libicudataswift.so,libicui18nswift.so,libicuucswift.so} /data/local/tmp
+adb push armeabi-v7a/{libswiftCore.so,libswiftSwiftOnoneSupport.so,libc++_shared.so,libicudataswift.so,libicui18nswift.so,libicuucswift.so} /data/local/tmp
 
 #adb push swift-android-toolchain/usr/lib/swift/android/libswiftGlibc.so /data/local/tmp
 #adb push swift-android-toolchain/usr/lib/swift/android/libswiftSwiftOnoneSupport.so /data/local/tmp
