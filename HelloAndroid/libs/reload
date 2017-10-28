@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+#SRC_DIR=$PWD
+
+#~/swift/swift/utils/android/reload-toolchain
+
+SWIFT_MACHINE_USERNAME="${SWIFT_MACHINE_USERNAME:?Please set the username for the machine which has the needed libraries in the SWIFT_MACHINE_USERNAME environment variable}"
+SWIFT_MACHINE_ADDRESS="${SWIFT_MACHINE_ADDRESS:?Please set the machine address of the machine which has the needed libraries in the SWIFT_MACHINE_ADDRESS environment variable}"
+
+scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:swift/swift-android-toolchain/usr/lib/swift/android/{libswiftCore.so,libswiftSwiftOnoneSupport.so} armeabi-v7a
+scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:swift/swift-android-toolchain/usr/lib/swift/android/armv7/{libc++_shared.so,libicudataswift.so,libicui18nswift.so,libicuucswift.so} armeabi-v7a
+
+
+#cd ~/swift
+adb push libs/armeabi-v7a/{libswiftCore.so,libswiftSwiftOnoneSupport.so,libc++_shared.so,libicudataswift.so,libicui18nswift.so,libicuucswift.so} /data/local/tmp
+
+#adb push swift-android-toolchain/usr/lib/swift/android/libswiftGlibc.so /data/local/tmp
+#adb push swift-android-toolchain/usr/lib/swift/android/libswiftSwiftOnoneSupport.so /data/local/tmp
+#adb push swift-android-toolchain/usr/lib/swift/android/libswiftRemoteMirror.so /data/local/tmp
+#adb push swift-android-toolchain/usr/lib/swift/android/libswiftSwiftExperimental.so /data/local/tmp
+#adb push swift-android-toolchain/usr/lib/swift/android/libicudata.so /data/local/tmp
+#adb push swift-android-toolchain/usr/lib/swift/android/libicui18n.so /data/local/tmp
+#adb push swift-android-toolchain/usr/lib/swift/android/libicuuc.so /data/local/tmp
+#adb push ${ANDROID_NDK_DIR}/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a/libc++_shared.so /data/local/tmp
+
+#cd ${SRC_DIR}
+scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:android/AmrSwiftAndroid/HelloAndroid/hello .
+adb push hello /data/local/tmp
+
+#cp ${ANDROID_NDK_DIR}/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a/libc++_shared.so armeabi-v7a
+#scp ${SWIFT_MACHINE_USERNAME}@${SWIFT_MACHINE_ADDRESS}:android/AmrSwiftAndroid/AddSwift/lib/armeabi-v7a/libAddSwift.so armeabi-v7a
