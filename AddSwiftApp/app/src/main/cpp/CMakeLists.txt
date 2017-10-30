@@ -20,7 +20,7 @@ cmake_minimum_required(VERSION 3.4.1)
 # configure import libs
 set(distribution_DIR ${CMAKE_SOURCE_DIR}/../../../../distribution)
 #set(AddSwiftDIR ${CMAKE_SOURCE_DIR}/../../../../../AddSwift)
-set(AndroidAppDir /Users/aaboelela/android/AmrSwiftAndroid/AddSwiftApp)
+set(AndroidAppDir ${CMAKE_SOURCE_DIR}/../../../..) #/Users/aaboelela/android/AmrSwiftAndroid/AddSwiftApp)
 #${CMAKE_SOURCE_DIR}/../../../../..)
 
 #add_library(lib_gmath STATIC IMPORTED)
