@@ -11,6 +11,7 @@ $ ./build
 In Mac OS:
 
 ```
-$ ./reload
+$ cd libs
+libs$ ./reload
 ```
 
